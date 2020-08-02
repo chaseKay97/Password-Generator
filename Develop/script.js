@@ -9,6 +9,14 @@ function writePassword() {
   passwordText.value = password;
 
 }
+//options
+var specialOne= ".,!/_"
+var upperCase= "ABCDEFGHIJKLMNOPQRSTUVWXYZ" 
+var lowerCase= "abcdefghijklmnopqrstuvwxyz"
+var numbers = "1234567890"
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+function writePassword(){
+  document.getElementById("")
+}
