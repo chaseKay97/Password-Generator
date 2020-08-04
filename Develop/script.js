@@ -12,3 +12,16 @@ var confirmSpecialCharacter;
 var confirmNumericCharacter;
 var confirmUpperCase;
 var confirmLowerCase;
+
+// How many characters for the password
+function generatePassword() {
+  var confirmLength = (prompt("How many characters would you like your password to have?"));
+  //
+ while(confirmLength <= 8|| confirmLength >= 128) {
+  alert("Password length must be between 8-128 characters Try again");
+  var confirmLength = (prompt("How many characters would you like your password to have?"));
+  } 
+ // let the user know how any  characters they will have  
+   alert(`Your password will have ${confirmLength} characters`);
+
+}
