@@ -31,7 +31,7 @@ function generatePassword() {
     var confirmSpecialCharacter = confirm("Press OK to confirm to include special characters");
     var confirmNumericCharacter = confirm("Press OK to confirm to include numeric characters");    
     var confirmLowerCase = confirm("Press OK to confirm to include lowercase characters");
-    var confirmUpperCase = confirm("Press OK to confirm e to include uppercase characters");
+    var confirmUpperCase = confirm("Press OK to confirm  to include uppercase characters");
       // Loop if password doesnt equal before
       while(confirmUpperCase === false && confirmLowerCase === false && confirmSpecialCharacter === false && confirmNumericCharacter === false) {
         alert("You must choose at least one parameter");
@@ -41,3 +41,34 @@ function generatePassword() {
         var confirmUpperCase = confirm("Press OK to confirm  to include uppercase characters");   
     } 
 
+      // action to the password 
+      var passwordCharacters = []
+      
+    if (confirmSpecialCharacter) {
+      passwordCharacters = passwordCharacters.concat(specialChar)
+    }
+
+    if (confirmNumericCharacter) {
+      passwordCharacters = passwordCharacters.concat(number)
+    }
+      
+    if (confirmLowerCase) {
+      passwordCharacters = passwordCharacters.concat(alphaLower)
+    }
+
+    if (confirmUpperCase) {
+      passwordCharacters = passwordCharacters.concat(alphaUpper)
+    }
+
+      //console.log(passwordCharacters)
+
+      // Empty string  for loop selecting random characters 
+      var randomPassword = ""
+      
+      for (var i = 0; i < confirmLength; i++) {
+        randomPassword = randomPassword + passwordCharacters[Math.floor(Math.random() * passwordCharacters.length)];
+        //console.log(randomPassword)
+      }var passwordText = document.querySelector("#password")
+      
+      passwordText.value = randomPassword;
+    }
