@@ -32,7 +32,7 @@ function generatePassword() {
     var confirmNumericCharacter = confirm("Press OK to confirm to include numeric characters");    
     var confirmLowerCase = confirm("Press OK to confirm to include lowercase characters");
     var confirmUpperCase = confirm("Press OK to confirm  to include uppercase characters");
-      // Loop if password doesnt equal before
+      // Loop if password doesn't equal before
       while(confirmUpperCase === false && confirmLowerCase === false && confirmSpecialCharacter === false && confirmNumericCharacter === false) {
         alert("You must choose at least one parameter");
         var confirmSpecialCharacter = confirm("Press OK to confirm to include special characters");
@@ -60,7 +60,7 @@ function generatePassword() {
       passwordCharacters = passwordCharacters.concat(alphaUpper)
     }
 
-      //console.log(passwordCharacters)
+      //console.log(passwordCharacters)...
 
       // Empty string  for loop selecting random characters 
       var randomPassword = ""
